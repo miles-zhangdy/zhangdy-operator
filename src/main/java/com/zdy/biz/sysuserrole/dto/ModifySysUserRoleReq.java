@@ -1,8 +1,9 @@
 package com.zdy.biz.sysuserrole.dto;
 
 import com.zdy.biz.sysuserrole.model.SysUserRole;
+import lombok.Data;
 
-
+@Data
 public class ModifySysUserRoleReq  {
 
 	/**
@@ -14,24 +15,7 @@ public class ModifySysUserRoleReq  {
 	private Long sysUserId;
 	private Long sysRoleId;
 	private Long custId;
-	
-	public void setId(Long id) {
-		this.id = id;
-	}
-	
-	public Long getId() {
-		return this.id;
-	}
-	public void setSysUserId(Long sysUserId) {
-		this.sysUserId = sysUserId;
-	}
-	
-	public Long getSysUserId() {
-		return this.sysUserId;
-	}
-	public void setSysRoleId(Long sysRoleId) {
-		this.sysRoleId = sysRoleId;
-	}
+
 	
 	public Long getSysRoleId() {
 		return this.sysRoleId;
@@ -58,12 +42,5 @@ public class ModifySysUserRoleReq  {
 		return sysUserRole;
 	}
 
-	public Long getCustId() {
-		return custId;
-	}
-
-	public void setCustId(Long custId) {
-		this.custId = custId;
-	}
 	
 }

@@ -5,8 +5,9 @@ import java.util.Map;
 
 import com.zdy.biz.sysrolepermission.model.SysRolePermission;
 import com.zdy.util.Page;
+import lombok.Data;
 
-
+@Data
 public class RolePermissionVO extends Page implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -48,29 +49,6 @@ public class RolePermissionVO extends Page implements java.io.Serializable {
 		return map;
 	}
 
-	public void setId(Long value) {
-		this.id = value;
-	}
-
-	public Long getId() {
-		return this.id;
-	}
-
-	public void setSysRoleId(Long value) {
-		this.sysRoleId = value;
-	}
-
-	public Long getSysRoleId() {
-		return this.sysRoleId;
-	}
-
-	public void setSysPermissionId(Long value) {
-		this.sysPermissionId = value;
-	}
-
-	public Long getSysPermissionId() {
-		return this.sysPermissionId;
-	}
 
 	public SysRolePermission toSysRolePermission() {
 		SysRolePermission sysRolePermission = new SysRolePermission();

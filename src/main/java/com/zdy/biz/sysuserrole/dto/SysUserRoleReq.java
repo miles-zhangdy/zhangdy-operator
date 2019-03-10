@@ -5,8 +5,9 @@ import java.util.Map;
 
 import com.zdy.biz.sysuserrole.model.SysUserRole;
 import com.zdy.util.Page;
+import lombok.Data;
 
-
+@Data
 public class SysUserRoleReq extends Page {
 	/**
 	 * 
@@ -30,14 +31,7 @@ public class SysUserRoleReq extends Page {
 	private Long custId;
 	
 	private Long[] ids;
-	
-	public void setIds(Long[] ids){
-		this.ids = ids;
-	}
-	
-	public Long[] getIds(){
-		return this.ids;
-	}
+
 	
 	public SysUserRoleReq(){
 		
@@ -81,45 +75,7 @@ public class SysUserRoleReq extends Page {
 		map.put("custId", this.custId);
 		return map;
 	}
-	
-		
-	public void setId(Long value) {
-		this.id = value;
-	}
-	
-	public Long getId() {
-		return this.id;
-	}
-	
-		
-	public void setSysUserId(Long value) {
-		this.sysUserId = value;
-	}
-	
-	public Long getSysUserId() {
-		return this.sysUserId;
-	}
-	
-		
-	public void setSysRoleId(Long value) {
-		this.sysRoleId = value;
-	}
-	
-	public Long getSysRoleId() {
-		return this.sysRoleId;
-	}
 
-	public Long getCustId() {
-		return custId;
-	}
-
-	public void setCustId(Long custId) {
-		this.custId = custId;
-	}
-	
-
- 
-	
  
 }
 

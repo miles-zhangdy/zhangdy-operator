@@ -5,9 +5,10 @@ import java.util.Map;
 
 import com.zdy.biz.syspermission.model.SysPermission;
 import com.zdy.util.Page;
+import lombok.Data;
 
 
-
+@Data
 public class PermissionVO extends Page implements java.io.Serializable {
 	
 	private static final long serialVersionUID = 1L;
@@ -90,70 +91,7 @@ public class PermissionVO extends Page implements java.io.Serializable {
 		return map;
 	}
 
-		
-	public void setId(Long value) {
-		this.id = value;
-	}
-	
-	public Long getId() {
-		return this.id;
-	}
-		
-	public void setName(String value) {
-		this.name = value;
-	}
-	
-	public String getName() {
-		return this.name;
-	}
-		
-	public void setType(String value) {
-		this.type = value;
-	}
-	
-	public String getType() {
-		return this.type;
-	}
-		
-	public void setUrl(String value) {
-		this.url = value;
-	}
-	
-	public String getUrl() {
-		return this.url;
-	}
-		
-	public void setPercode(String value) {
-		this.percode = value;
-	}
-	
-	public String getPercode() {
-		return this.percode;
-	}
-		
-	public void setParentid(Long value) {
-		this.parentid = value;
-	}
-	
-	public Long getParentid() {
-		return this.parentid;
-	}
-		
-	public void setSortstring(String value) {
-		this.sortstring = value;
-	}
-	
-	public String getSortstring() {
-		return this.sortstring;
-	}
-		
-	public void setAvailable(String value) {
-		this.available = value;
-	}
-	
-	public String getAvailable() {
-		return this.available;
-	}
+
  
 	public SysPermission toSysPermission(){
 		SysPermission  sysPermission = new SysPermission();
@@ -170,21 +108,6 @@ public class PermissionVO extends Page implements java.io.Serializable {
 		return sysPermission;
 	}
 
-	public String getMenuClassName() {
-		return menuClassName;
-	}
-
-	public void setMenuClassName(String menuClassName) {
-		this.menuClassName = menuClassName;
-	}
-
-	public String getIsShow() {
-		return isShow;
-	}
-
-	public void setIsShow(String isShow) {
-		this.isShow = isShow;
-	}
 
 }
 

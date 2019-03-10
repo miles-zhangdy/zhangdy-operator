@@ -5,7 +5,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.zdy.biz.sysuserrole.model.SysUserRole;
+import lombok.Data;
 
+@Data
 public class SysUserRoleResp {
 
 	/**
@@ -67,38 +69,6 @@ public class SysUserRoleResp {
 		return map;
 	}
 	
-		
-	public void setId(Long value) {
-		this.id = value;
-	}
-	
-	public Long getId() {
-		return this.id;
-	}
-		
-	public void setSysUserId(Long value) {
-		this.sysUserId = value;
-	}
-	
-	public Long getSysUserId() {
-		return this.sysUserId;
-	}
-		
-	public void setSysRoleId(Long value) {
-		this.sysRoleId = value;
-	}
-	
-	public Long getSysRoleId() {
-		return this.sysRoleId;
-	}
-
-	public Long getCustId() {
-		return custId;
-	}
-
-	public void setCustId(Long custId) {
-		this.custId = custId;
-	}
 
  
 }

@@ -1,8 +1,9 @@
 package com.zdy.biz.sysrole.dto;
 
 import com.zdy.biz.sysrole.model.SysRole;
+import lombok.Data;
 
-
+@Data
 public class ModifySysRoleReq  {
 
 	/**
@@ -14,27 +15,6 @@ public class ModifySysRoleReq  {
 	private String name;
 	private String available;
 	private Long custId;
-	public void setId(Long id) {
-		this.id = id;
-	}
-	
-	public Long getId() {
-		return this.id;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	
-	public String getName() {
-		return this.name;
-	}
-	public void setAvailable(String available) {
-		this.available = available;
-	}
-	
-	public String getAvailable() {
-		return this.available;
-	}
 
 	public ModifySysRoleReq(){
 		
@@ -57,12 +37,4 @@ public class ModifySysRoleReq  {
 		return sysRole;
 	}
 
-	public Long getCustId() {
-		return custId;
-	}
-
-	public void setCustId(Long custId) {
-		this.custId = custId;
-	}
-	
 }

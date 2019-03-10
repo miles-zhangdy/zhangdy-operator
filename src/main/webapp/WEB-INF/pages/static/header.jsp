@@ -23,7 +23,7 @@
 				<ul class="nav navbar-nav navbar-right pull-right">
 					<li class="dropdown"><a href=""
 						class="dropdown-toggle profile" data-toggle="dropdown"
-						aria-expanded="true">您好，${ENVIRONMENT_USER.userCompellation }<img
+						aria-expanded="true">您好，${ENVIRONMENT_USER.userCompellation } &nbsp;<img
 							src="static/images/users/avatar-1.jpg" alt="user-img"
 							class="img-circle"> </a>
 						<ul class="dropdown-menu">

@@ -6,7 +6,9 @@ import java.util.Map;
 
 import com.zdy.biz.siteparameter.model.SiteParameter;
 import com.zdy.util.Page;
-	
+import lombok.Data;
+
+@Data
 public class SiteParameterVO extends Page implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -115,125 +117,7 @@ public class SiteParameterVO extends Page implements java.io.Serializable {
 		return map;
 	}
 
-	public void setId(Long value) {
-		this.id = value;
-	}
 
-	public Long getId() {
-		return this.id;
-	}
-
-	public void setParamName(String value) {
-		this.paramName = value;
-	}
-
-	public String getParamName() {
-		return this.paramName;
-	}
-
-	public void setParamValue(String value) {
-		this.paramValue = value;
-	}
-
-	public String getParamValue() {
-		return this.paramValue;
-	}
-
-	public void setParamComment(String value) {
-		this.paramComment = value;
-	}
-
-	public String getParamComment() {
-		return this.paramComment;
-	}
-
-	public void setRemark(String value) {
-		this.remark = value;
-	}
-
-	public String getRemark() {
-		return this.remark;
-	}
-
-	public void setCreateTime(Date value) {
-		this.createTime = value;
-	}
-
-	public Date getCreateTime() {
-		return this.createTime;
-	}
-
-	public void setOperTime(Date value) {
-		this.operTime = value;
-	}
-
-	public Date getOperTime() {
-		return this.operTime;
-	}
-
-	public void setCreateUser(Long value) {
-		this.createUser = value;
-	}
-
-	public Long getCreateUser() {
-		return this.createUser;
-	}
-
-	public void setRsrvStr1(String value) {
-		this.rsrvStr1 = value;
-	}
-
-	public String getRsrvStr1() {
-		return this.rsrvStr1;
-	}
-
-	public void setRsrvStr2(String value) {
-		this.rsrvStr2 = value;
-	}
-
-	public String getRsrvStr2() {
-		return this.rsrvStr2;
-	}
-
-	public void setRsrvStr3(String value) {
-		this.rsrvStr3 = value;
-	}
-
-	public String getRsrvStr3() {
-		return this.rsrvStr3;
-	}
-
-	public void setRsrvStr4(String value) {
-		this.rsrvStr4 = value;
-	}
-
-	public String getRsrvStr4() {
-		return this.rsrvStr4;
-	}
-
-	public void setRsrvStr5(String value) {
-		this.rsrvStr5 = value;
-	}
-
-	public String getRsrvStr5() {
-		return this.rsrvStr5;
-	}
-
-	public void setRsrvStr6(String value) {
-		this.rsrvStr6 = value;
-	}
-
-	public String getRsrvStr6() {
-		return this.rsrvStr6;
-	}
-
-	public void setIds(Long[] ids) {
-		this.ids = ids;
-	}
-
-	public Long[] getIds() {
-		return this.ids;
-	}
 
 	public SiteParameter toSiteParameter() {
 		SiteParameter siteParameter = new SiteParameter();

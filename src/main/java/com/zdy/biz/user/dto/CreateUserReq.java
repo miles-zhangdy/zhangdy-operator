@@ -1,10 +1,13 @@
 package com.zdy.biz.user.dto;
 
-import java.util.Date;
 
 import com.zdy.biz.user.model.User;
 import com.zdy.common.enums.Status;
+import lombok.Data;
 
+import java.util.Date;
+
+@Data
 public class CreateUserReq {
 
 	/**
@@ -55,102 +58,6 @@ public class CreateUserReq {
 			this.createUser = user.getCreateUser();
 			this.modifyTime = user.getModifyTime();
 		}
-	}
-	
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-
-	public String getUserName() {
-		return this.userName;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-
-	public String getPassword() {
-		return this.password;
-	}
-
-	public void setParentId(Long parentId) {
-		this.parentId = parentId;
-	}
-
-	public Long getParentId() {
-		return this.parentId;
-	}
-
-	public void setUserCompellation(String userCompellation) {
-		this.userCompellation = userCompellation;
-	}
-
-	public String getUserCompellation() {
-		return this.userCompellation;
-	}
-
-	public void setUserAge(Integer userAge) {
-		this.userAge = userAge;
-	}
-
-	public Integer getUserAge() {
-		return this.userAge;
-	}
-
-	public void setUserSex(Status userSex) {
-		this.userSex = userSex;
-	}
-
-	public Status getUserSex() {
-		return this.userSex;
-	}
-
-	public void setUserPhone(String userPhone) {
-		this.userPhone = userPhone;
-	}
-
-	public String getUserPhone() {
-		return this.userPhone;
-	}
-
-	public void setUserFreeze(Integer userFreeze) {
-		this.userFreeze = userFreeze;
-	}
-
-	public Integer getUserFreeze() {
-		return this.userFreeze;
-	}
-
-	public void setUserValidate(Integer userValidate) {
-		this.userValidate = userValidate;
-	}
-
-	public Integer getUserValidate() {
-		return this.userValidate;
-	}
-
-	public void setCreateTime(Date createTime) {
-		this.createTime = createTime;
-	}
-
-	public Date getCreateTime() {
-		return this.createTime;
-	}
-
-	public void setCreateUser(String createUser) {
-		this.createUser = createUser;
-	}
-
-	public String getCreateUser() {
-		return this.createUser;
-	}
-
-	public void setModifyTime(Date modifyTime) {
-		this.modifyTime = modifyTime;
-	}
-
-	public Date getModifyTime() {
-		return this.modifyTime;
 	}
 
 	public User toUser() {

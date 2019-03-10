@@ -6,8 +6,10 @@ import java.util.Map;
 
 import com.zdy.biz.dictionary.model.DictionaryParam;
 import com.zdy.util.Page;
+import lombok.Data;
 
 
+@Data
 public class DictionaryParamReq extends Page {
 	/**
 	 * 
@@ -49,14 +51,7 @@ public class DictionaryParamReq extends Page {
 	private Date operTime;
 	
 	private Long[] ids;
-	
-	public void setIds(Long[] ids){
-		this.ids = ids;
-	}
-	
-	public Long[] getIds(){
-		return this.ids;
-	}
+
 	
 	public DictionaryParamReq(){
 		
@@ -117,81 +112,5 @@ public class DictionaryParamReq extends Page {
 		return map;
 	}
 	
-		
-	public void setId(Long value) {
-		this.id = value;
-	}
-	
-	public Long getId() {
-		return this.id;
-	}
-	
-		
-	public void setDictionaryId(Long value) {
-		this.dictionaryId = value;
-	}
-	
-	public Long getDictionaryId() {
-		return this.dictionaryId;
-	}
-	
-		
-	public void setParamKey(String value) {
-		this.paramKey = value;
-	}
-	
-	public String getParamKey() {
-		return this.paramKey;
-	}
-	
-		
-	public void setParamDesc(String value) {
-		this.paramDesc = value;
-	}
-	
-	public String getParamDesc() {
-		return this.paramDesc;
-	}
-	
-		
-	public void setRemark(String value) {
-		this.remark = value;
-	}
-	
-	public String getRemark() {
-		return this.remark;
-	}
-	
-		
-	public void setCreateTime(Date value) {
-		this.createTime = value;
-	}
-	
-	public Date getCreateTime() {
-		return this.createTime;
-	}
-	
-		
-	public void setCreateUser(Long value) {
-		this.createUser = value;
-	}
-	
-	public Long getCreateUser() {
-		return this.createUser;
-	}
-	
-		
-	public void setOperTime(Date value) {
-		this.operTime = value;
-	}
-	
-	public Date getOperTime() {
-		return this.operTime;
-	}
-	
-
- 
-	
- 
 }
 

@@ -3,8 +3,9 @@ package com.zdy.biz.dictionary.dto;
 import java.util.Date;
 
 import com.zdy.biz.dictionary.model.DictionaryParam;
+import lombok.Data;
 
-
+@Data
 public class CreateDictionaryParamReq{
 
 	/**
@@ -27,56 +28,7 @@ public class CreateDictionaryParamReq{
 	
 	private Date operTime;
 	
-		public void setDictionaryId(Long dictionaryId) {
-			this.dictionaryId = dictionaryId;
-		}
-		
-		public Long getDictionaryId() {
-			return this.dictionaryId;
-		}
-		public void setParamKey(String paramKey) {
-			this.paramKey = paramKey;
-		}
-		
-		public String getParamKey() {
-			return this.paramKey;
-		}
-		public void setParamDesc(String paramDesc) {
-			this.paramDesc = paramDesc;
-		}
-		
-		public String getParamDesc() {
-			return this.paramDesc;
-		}
-		public void setRemark(String remark) {
-			this.remark = remark;
-		}
-		
-		public String getRemark() {
-			return this.remark;
-		}
-		public void setCreateTime(Date createTime) {
-			this.createTime = createTime;
-		}
-		
-		public Date getCreateTime() {
-			return this.createTime;
-		}
-		public void setCreateUser(Long createUser) {
-			this.createUser = createUser;
-		}
-		
-		public Long getCreateUser() {
-			return this.createUser;
-		}
-		public void setOperTime(Date operTime) {
-			this.operTime = operTime;
-		}
-		
-		public Date getOperTime() {
-			return this.operTime;
-		}
-	
+
 	public CreateDictionaryParamReq(){
 		
 	}

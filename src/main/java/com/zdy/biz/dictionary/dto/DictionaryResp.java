@@ -6,7 +6,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.zdy.biz.dictionary.model.Dictionary;
+import lombok.Data;
 
+
+@Data
 public class DictionaryResp implements Serializable{
 
 	/**
@@ -85,56 +88,6 @@ public class DictionaryResp implements Serializable{
 		map.put("operTime",this.operTime);
 		return map;
 	}
-	
-		
-	public void setId(Long value) {
-		this.id = value;
-	}
-	
-	public Long getId() {
-		return this.id;
-	}
-		
-	public void setDictionaryKey(String value) {
-		this.dictionaryKey = value;
-	}
-	
-	public String getDictionaryKey() {
-		return this.dictionaryKey;
-	}
-		
-	public void setDictionartDesc(String value) {
-		this.dictionartDesc = value;
-	}
-	
-	public String getDictionartDesc() {
-		return this.dictionartDesc;
-	}
-		
-	public void setCreateTime(Date value) {
-		this.createTime = value;
-	}
-	
-	public Date getCreateTime() {
-		return this.createTime;
-	}
-		
-	public void setCreateUser(Long value) {
-		this.createUser = value;
-	}
-	
-	public Long getCreateUser() {
-		return this.createUser;
-	}
-		
-	public void setOperTime(Date value) {
-		this.operTime = value;
-	}
-	
-	public Date getOperTime() {
-		return this.operTime;
-	}
 
- 
 }
 

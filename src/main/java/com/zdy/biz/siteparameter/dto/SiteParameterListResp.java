@@ -1,8 +1,11 @@
 package com.zdy.biz.siteparameter.dto;
 
+import lombok.Data;
+
 import java.io.Serializable;
 import java.util.Date;
 
+@Data
 public class SiteParameterListResp implements Serializable {
 
 	/**
@@ -11,13 +14,5 @@ public class SiteParameterListResp implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	private SiteParameterResp[] list;
-	
-	public SiteParameterResp[] getList(){
-		return list;
-	}
-	
-	public void setList(SiteParameterResp[] list){
-		this.list = list;
-	}
 }
 

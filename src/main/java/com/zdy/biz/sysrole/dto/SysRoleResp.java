@@ -1,11 +1,13 @@
 package com.zdy.biz.sysrole.dto;
 
-import java.util.Date;
+import com.zdy.biz.sysrole.model.SysRole;
+import lombok.Data;
+
 import java.util.HashMap;
 import java.util.Map;
 
-import com.zdy.biz.sysrole.model.SysRole;
 
+@Data
 public class SysRoleResp {
 
 	/**
@@ -69,48 +71,6 @@ public class SysRoleResp {
 		map.put("custId", this.custId);
 		return map;
 	}
-	
-		
-	public void setId(Long value) {
-		this.id = value;
-	}
-	
-	public Long getId() {
-		return this.id;
-	}
-		
-	public void setName(String value) {
-		this.name = value;
-	}
-	
-	public String getName() {
-		return this.name;
-	}
-		
-	public void setAvailable(String value) {
-		this.available = value;
-	}
-	
-	public String getAvailable() {
-		return this.available;
-	}
 
-	public String getChecked() {
-		return checked;
-	}
-
-	public void setChecked(String checked) {
-		this.checked = checked;
-	}
-
-	public Long getCustId() {
-		return custId;
-	}
-
-	public void setCustId(Long custId) {
-		this.custId = custId;
-	}
-
- 
 }
 

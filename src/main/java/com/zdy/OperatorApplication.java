@@ -10,11 +10,11 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @SpringBootApplication
 @EnableTransactionManagement
 @MapperScan(basePackages = "com.zdy.**.dao")//这一步是让mapper文件实现dao接口的
-public class Application extends SpringBootServletInitializer {
+public class OperatorApplication extends SpringBootServletInitializer {
 
 	public static void main(String[] args) {
 		try {
-			SpringApplication.run(Application.class, args);
+			SpringApplication.run(OperatorApplication.class, args);
 		} catch (Exception e) {
 			
 		}
@@ -22,6 +22,6 @@ public class Application extends SpringBootServletInitializer {
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-		return application.sources(Application.class);
+		return application.sources(OperatorApplication.class);
 	}
 }

@@ -1,8 +1,5 @@
 package com.zdy.common.interceptor;
 
-import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer;
-import org.springframework.boot.context.embedded.EmbeddedServletContainerFactory;
-import org.springframework.boot.context.embedded.tomcat.TomcatEmbeddedServletContainerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -12,12 +9,10 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
-import com.zdy.Application;
-
-import java.io.File;
+import com.zdy.OperatorApplication;
 
 @Configuration
-@ComponentScan(basePackageClasses = Application.class, useDefaultFilters = true)
+@ComponentScan(basePackageClasses = OperatorApplication.class, useDefaultFilters = true)
 public class SessionConfig extends WebMvcConfigurationSupport {
 
 	@Override

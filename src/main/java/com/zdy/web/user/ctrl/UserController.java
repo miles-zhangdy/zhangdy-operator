@@ -110,6 +110,7 @@ public class UserController extends BaseController {
 		vo.setCreateUser(sessionUser.getUserName());
 		vo.setParentId(sessionUser.getId());
 		vo.setUserValidate(1);
+		vo.setPassword(MD5coding.MD5(vo.getPassword()));
 		ServiceResult<UserResp> serviceResult = userService.save(new CreateUserReq(vo.toUser()));
 
 		if (serviceResult != null && serviceResult.isSuccess()) {

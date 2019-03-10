@@ -5,8 +5,9 @@ import java.util.Map;
 
 import com.zdy.biz.sysrole.model.SysRole;
 import com.zdy.util.Page;
+import lombok.Data;
 
-
+@Data
 public class SysRoleReq extends Page {
 	/**
 	 * 
@@ -71,9 +72,9 @@ public class SysRoleReq extends Page {
 		sysRole.setIds(this.ids);
 		sysRole.setUserId(this.userId);
 		sysRole.setCustId(this.custId);
-//		sysRole.setPage(this.getPage());
-//		sysRole.setBeginIndex(this.getBeginIndex());
-//		sysRole.setPageSize(this.getPageSize());
+		sysRole.setPage(this.getPage());
+		sysRole.setBeginIndex(this.getBeginIndex());
+		sysRole.setPageSize(this.getPageSize());
 		return sysRole;
 	}
 	
@@ -86,52 +87,6 @@ public class SysRoleReq extends Page {
 		return map;
 	}
 	
-		
-	public void setId(Long value) {
-		this.id = value;
-	}
-	
-	public Long getId() {
-		return this.id;
-	}
-	
-		
-	public void setName(String value) {
-		this.name = value;
-	}
-	
-	public String getName() {
-		return this.name;
-	}
-	
-		
-	public void setAvailable(String value) {
-		this.available = value;
-	}
-	
-	public String getAvailable() {
-		return this.available;
-	}
 
-	public Long getUserId() {
-		return userId;
-	}
-
-	public void setUserId(Long userId) {
-		this.userId = userId;
-	}
-
-	public Long getCustId() {
-		return custId;
-	}
-
-	public void setCustId(Long custId) {
-		this.custId = custId;
-	}
-	
-
- 
-	
- 
 }
 

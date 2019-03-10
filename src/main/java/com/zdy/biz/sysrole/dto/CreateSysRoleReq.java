@@ -1,7 +1,9 @@
 package com.zdy.biz.sysrole.dto;
 
 import com.zdy.biz.sysrole.model.SysRole;
+import lombok.Data;
 
+@Data
 public class CreateSysRoleReq {
 
 	/**
@@ -15,21 +17,6 @@ public class CreateSysRoleReq {
 
 	private Long custId;
 
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getName() {
-		return this.name;
-	}
-
-	public void setAvailable(String available) {
-		this.available = available;
-	}
-
-	public String getAvailable() {
-		return this.available;
-	}
 
 	public CreateSysRoleReq() {
 
@@ -49,14 +36,6 @@ public class CreateSysRoleReq {
 		sysRole.setAvailable(this.available);
 		sysRole.setCustId(this.custId);
 		return sysRole;
-	}
-
-	public Long getCustId() {
-		return custId;
-	}
-
-	public void setCustId(Long custId) {
-		this.custId = custId;
 	}
 
 }

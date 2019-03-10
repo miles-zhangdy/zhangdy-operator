@@ -7,8 +7,10 @@ import java.util.Map;
 import com.zdy.biz.user.model.User;
 import com.zdy.common.enums.Status;
 import com.zdy.util.Page;
+import lombok.Data;
 
 
+@Data
 public class UserReq extends Page {
 	/**
 	 * 
@@ -159,174 +161,14 @@ public class UserReq extends Page {
 		return map;
 	}
 	
-		
-	public void setId(Long value) {
-		this.id = value;
-	}
-	
-	public Long getId() {
-		return this.id;
-	}
-	
-	
-		
-	public void setUserName(String value) {
-		this.userName = value;
-	}
-	
-	public String getUserName() {
-		return this.userName;
-	}
-	
-	
-		
-	public void setPassword(String value) {
-		this.password = value;
-	}
-	
-	public String getPassword() {
-		return this.password;
-	}
-	
-	
-		
-	public void setParentId(Long value) {
-		this.parentId = value;
-	}
-	
-	public Long getParentId() {
-		return this.parentId;
-	}
-	
-	
-		
-	public void setUserCompellation(String value) {
-		this.userCompellation = value;
-	}
-	
-	public String getUserCompellation() {
-		return this.userCompellation;
-	}
-	
-	
-		
-	public void setUserAge(Integer value) {
-		this.userAge = value;
-	}
-	
-	public Integer getUserAge() {
-		return this.userAge;
-	}
-	
-	
-		
-	public void setUserSex(Status value) {
-		this.userSex = value;
-	}
-	
-	public Status getUserSex() {
-		return this.userSex;
-	}
-	
-	
-		
-	public void setUserPhone(String value) {
-		this.userPhone = value;
-	}
-	
-	public String getUserPhone() {
-		return this.userPhone;
-	}
-	
-	
-		
-	public void setUserFreeze(Integer value) {
-		this.userFreeze = value;
-	}
-	
-	public Integer getUserFreeze() {
-		return this.userFreeze;
-	}
-	
-	
-		
-	public void setUserValidate(Integer value) {
-		this.userValidate = value;
-	}
-	
-	public Integer getUserValidate() {
-		return this.userValidate;
-	}
-	
-	
-		
-	public void setCreateTime(Date value) {
-		this.createTime = value;
-	}
-	
-	public Date getCreateTime() {
-		return this.createTime;
-	}
+
 	
     private Date minCreateTime;
     private Date maxCreateTime;
-    
-    public void setMinCreateTime(Date value) {
-		this.minCreateTime = value;
-	}
-    public Date getMinCreateTime() {
-		return this.minCreateTime;
-	}
-    public void setMaxCreateTime(Date value) {
-    	this.maxCreateTime = value;
-    }
-    public Date getMaxCreateTime() {
-    	return this.maxCreateTime;
-    }
-	
-		
-	public void setCreateUser(String value) {
-		this.createUser = value;
-	}
-	
-	public String getCreateUser() {
-		return this.createUser;
-	}
-	
-	
-		
-	public void setModifyTime(Date value) {
-		this.modifyTime = value;
-	}
-	
-	public Date getModifyTime() {
-		return this.modifyTime;
-	}
-	
+
     private Date minModifyTime;
     private Date maxModifyTime;
-    
-    public void setMinModifyTime(Date value) {
-		this.minModifyTime = value;
-	}
-    public Date getMinModifyTime() {
-		return this.minModifyTime;
-	}
-    public void setMaxModifyTime(Date value) {
-    	this.maxModifyTime = value;
-    }
-    public Date getMaxModifyTime() {
-    	return this.maxModifyTime;
-    }
 
-	public Long[] getIds() {
-		return ids;
-	}
-
-	public void setIds(Long[] ids) {
-		this.ids = ids;
-	}
-	
 
  
 	

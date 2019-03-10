@@ -3,7 +3,9 @@ package com.zdy.biz.dictionary.dto;
 import java.util.Date;
 
 import com.zdy.biz.dictionary.model.Dictionary;
+import lombok.Data;
 
+@Data
 public class ModifyDictionaryReq {
 
 	/**
@@ -17,54 +19,6 @@ public class ModifyDictionaryReq {
 	private Date createTime;
 	private Long createUser;
 	private Date operTime;
-
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public Long getId() {
-		return this.id;
-	}
-
-	public void setDictionaryKey(String dictionaryKey) {
-		this.dictionaryKey = dictionaryKey;
-	}
-
-	public String getDictionaryKey() {
-		return this.dictionaryKey;
-	}
-
-	public void setDictionartDesc(String dictionartDesc) {
-		this.dictionartDesc = dictionartDesc;
-	}
-
-	public String getDictionartDesc() {
-		return this.dictionartDesc;
-	}
-
-	public void setCreateTime(Date createTime) {
-		this.createTime = createTime;
-	}
-
-	public Date getCreateTime() {
-		return this.createTime;
-	}
-
-	public void setCreateUser(Long createUser) {
-		this.createUser = createUser;
-	}
-
-	public Long getCreateUser() {
-		return this.createUser;
-	}
-
-	public void setOperTime(Date operTime) {
-		this.operTime = operTime;
-	}
-
-	public Date getOperTime() {
-		return this.operTime;
-	}
 
 	public ModifyDictionaryReq() {
 

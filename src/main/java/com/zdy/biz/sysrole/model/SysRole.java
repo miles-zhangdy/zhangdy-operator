@@ -5,8 +5,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 import com.zdy.util.Page;
+import lombok.Data;
 
-
+@Data
 public class SysRole extends Page implements java.io.Serializable {
 	
 	private static final long serialVersionUID = 1L;
@@ -58,62 +59,5 @@ public class SysRole extends Page implements java.io.Serializable {
 		return map;
 	}
 
-		
-	public void setId(Long value) {
-		this.id = value;
-	}
-	
-	public Long getId() {
-		return this.id;
-	}
-		
-	public void setName(String value) {
-		this.name = value;
-	}
-	
-	public String getName() {
-		return this.name;
-	}
-		
-	public void setAvailable(String value) {
-		this.available = value;
-	}
-	
-	public String getAvailable() {
-		return this.available;
-	}
-
-	public Long[] getIds() {
-		return ids;
-	}
-
-	public void setIds(Long[] ids) {
-		this.ids = ids;
-	}
-
-	public Long getUserId() {
-		return userId;
-	}
-
-	public void setUserId(Long userId) {
-		this.userId = userId;
-	}
-
-	public String getChecked() {
-		return checked;
-	}
-
-	public void setChecked(String checked) {
-		this.checked = checked;
-	}
-
-	public Long getCustId() {
-		return custId;
-	}
-
-	public void setCustId(Long custId) {
-		this.custId = custId;
-	}
- 
 }
 

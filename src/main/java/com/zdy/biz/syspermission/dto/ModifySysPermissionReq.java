@@ -1,7 +1,9 @@
 package com.zdy.biz.syspermission.dto;
 
 import com.zdy.biz.syspermission.model.SysPermission;
+import lombok.Data;
 
+@Data
 public class ModifySysPermissionReq {
 
 	/**
@@ -19,69 +21,6 @@ public class ModifySysPermissionReq {
 	private String available;
 	private String className;
 	private String isShow;
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	public Long getId() {
-		return this.id;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getName() {
-		return this.name;
-	}
-
-	public void setType(String type) {
-		this.type = type;
-	}
-
-	public String getType() {
-		return this.type;
-	}
-
-	public void setUrl(String url) {
-		this.url = url;
-	}
-
-	public String getUrl() {
-		return this.url;
-	}
-
-	public void setPercode(String percode) {
-		this.percode = percode;
-	}
-
-	public String getPercode() {
-		return this.percode;
-	}
-
-	public void setParentid(Long parentid) {
-		this.parentid = parentid;
-	}
-
-	public Long getParentid() {
-		return this.parentid;
-	}
-
-	public void setSortstring(String sortstring) {
-		this.sortstring = sortstring;
-	}
-
-	public String getSortstring() {
-		return this.sortstring;
-	}
-
-	public void setAvailable(String available) {
-		this.available = available;
-	}
-
-	public String getAvailable() {
-		return this.available;
-	}
 
 	public ModifySysPermissionReq() {
 
@@ -115,22 +54,6 @@ public class ModifySysPermissionReq {
 		sysPermission.setClassName(this.className);
 		sysPermission.setIsShow(this.isShow);
 		return sysPermission;
-	}
-
-	public String getClassName() {
-		return className;
-	}
-
-	public void setClassName(String className) {
-		this.className = className;
-	}
-
-	public String getIsShow() {
-		return isShow;
-	}
-
-	public void setIsShow(String isShow) {
-		this.isShow = isShow;
 	}
 
 }

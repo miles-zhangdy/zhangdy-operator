@@ -5,8 +5,10 @@ import java.util.List;
 import java.util.Map;
 
 import com.zdy.util.Page;
+import lombok.Data;
 
 
+@Data
 public class SysPermission extends Page implements java.io.Serializable {
 	
 	private static final long serialVersionUID = 1L;
@@ -98,142 +100,5 @@ public class SysPermission extends Page implements java.io.Serializable {
 		return map;
 	}
 
-		
-	public void setId(Long value) {
-		this.id = value;
-	}
-	
-	public Long getId() {
-		return this.id;
-	}
-		
-	public void setName(String value) {
-		this.name = value;
-	}
-	
-	public String getName() {
-		return this.name;
-	}
-		
-	public void setType(String value) {
-		this.type = value;
-	}
-	
-	public String getType() {
-		return this.type;
-	}
-		
-	public void setUrl(String value) {
-		this.url = value;
-	}
-	
-	public String getUrl() {
-		return this.url;
-	}
-		
-	public void setPercode(String value) {
-		this.percode = value;
-	}
-	
-	public String getPercode() {
-		return this.percode;
-	}
-		
-	public void setParentid(Long value) {
-		this.parentid = value;
-	}
-	
-	public Long getParentid() {
-		return this.parentid;
-	}
-		
-	public void setSortstring(String value) {
-		this.sortstring = value;
-	}
-	
-	public String getSortstring() {
-		return this.sortstring;
-	}
-		
-	public void setAvailable(String value) {
-		this.available = value;
-	}
-	
-	public String getAvailable() {
-		return this.available;
-	}
-
-	public Long[] getIds() {
-		return ids;
-	}
-
-	public void setIds(Long[] ids) {
-		this.ids = ids;
-	}
-
-	public String getChecked() {
-		return checked;
-	}
-
-	public void setChecked(String checked) {
-		this.checked = checked;
-	}
-
-	public Long getRoleId() {
-		return roleId;
-	}
-
-	public void setRoleId(Long roleId) {
-		this.roleId = roleId;
-	}
-
-	public Long[] getRoleIds() {
-		return roleIds;
-	}
-
-	public void setRoleIds(Long[] roleIds) {
-		this.roleIds = roleIds;
-	}
-
-	public List<SysPermission> getChildList() {
-		return childList;
-	}
-
-	public void setChildList(List<SysPermission> childList) {
-		this.childList = childList;
-	}
-
-	public String getClassName() {
-		return className;
-	}
-
-	public void setClassName(String className) {
-		this.className = className;
-	}
-
-	public String getIsShow() {
-		return isShow;
-	}
-
-	public void setIsShow(String isShow) {
-		this.isShow = isShow;
-	}
-
-	public Long getCustId() {
-		return custId;
-	}
-
-	public void setCustId(Long custId) {
-		this.custId = custId;
-	}
-
-	public Long[] getSysRoleIds() {
-		return sysRoleIds;
-	}
-
-	public void setSysRoleIds(Long[] sysRoleIds) {
-		this.sysRoleIds = sysRoleIds;
-	}
- 
 }
 

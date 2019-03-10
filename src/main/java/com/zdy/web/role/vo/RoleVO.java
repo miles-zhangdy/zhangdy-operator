@@ -5,8 +5,9 @@ import java.util.Map;
 
 import com.zdy.biz.sysrole.model.SysRole;
 import com.zdy.util.Page;
+import lombok.Data;
 
-
+@Data
 public class RoleVO extends Page implements java.io.Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -51,29 +52,6 @@ public class RoleVO extends Page implements java.io.Serializable {
 		return map;
 	}
 
-	public void setId(Long value) {
-		this.id = value;
-	}
-
-	public Long getId() {
-		return this.id;
-	}
-
-	public void setName(String value) {
-		this.name = value;
-	}
-
-	public String getName() {
-		return this.name;
-	}
-
-	public void setAvailable(String value) {
-		this.available = value;
-	}
-
-	public String getAvailable() {
-		return this.available;
-	}
 
 	public SysRole toSysRole() {
 		SysRole sysRole = new SysRole();
@@ -84,11 +62,4 @@ public class RoleVO extends Page implements java.io.Serializable {
 		return sysRole;
 	}
 
-	public Long getCustId() {
-		return custId;
-	}
-
-	public void setCustId(Long custId) {
-		this.custId = custId;
-	}
 }
