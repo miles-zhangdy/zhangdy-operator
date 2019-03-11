@@ -133,5 +133,13 @@ public class SysResourceController extends BaseController {
 		}
 		return res;
 	}
+
+	@RequestMapping(value = "/reloanresource")
+	@ResponseBody
+	public Result reloadResoure(){
+
+		return null;
+	}
+
 		
 }

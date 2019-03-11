@@ -169,4 +169,12 @@ public class SysResourceServiceImpl implements ISysResourceService {
 		}
 		return result.success();
 	}
+
+	@Override
+	@WriteDataSource
+	public ServiceResult<Boolean> reloanResouce() {
+
+
+		return null;
+	}
 }

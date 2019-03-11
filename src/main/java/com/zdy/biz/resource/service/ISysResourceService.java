@@ -25,4 +25,6 @@ public interface ISysResourceService {
 
 	ServiceResult<Boolean> saveRoleResource(CreateSysRoleResourceReq req);
 
+	ServiceResult<Boolean> reloanResouce();
+
 }
