@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8" ?>   
+    <!DOCTYPE mapper   
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zdy.biz.resource.dao.ISysResourceDao">
+
+	<resultMap id="BaseResultMap" type="com.zdy.biz.resource.model.SysResource">
+		<id column="id" property="id" />
+		<result property="name" column="name" />
+		<result property="module" column="module" />
+		<result property="url" column="url" />
+		<result property="parentId" column="parent_id" />
+		<result property="msg" column="msg" />
+	</resultMap>
+
+	<sql id="BaseColumnList">
+	    <![CDATA[
+			sys_resource.id id ,
+			sys_resource.name name ,
+			sys_resource.module module ,
+			sys_resource.url url ,
+			sys_resource.parent_id parentId ,
+			sys_resource.msg msg 
+	    ]]>
+	</sql>
+
+	<sql id="listWhere">
+		<if test="id != null ">
+			and id = #{id}
+		</if>
+		<if
+			test="name != null and name != ''">
+			and name = #{name}
+		</if>
+		<if
+			test="module != null and module != ''">
+			and module = #{module}
+		</if>
+		<if
+			test="url != null and url != ''">
+			and url = #{url}
+		</if>
+		<if test="parentId != null ">
+			and parent_id = #{parentId}
+		</if>
+		<if
+			test="msg != null and msg != ''">
+			and msg = #{msg}
+		</if>
+	</sql>
+
+	<insert id="save" useGeneratedKeys="true"
+		keyProperty="id">
+		insert into
+		sys_resource
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="name != null">
+				name ,
+			</if>
+			<if test="module != null">
+				module ,
+			</if>
+			<if test="url != null">
+				url ,
+			</if>
+			<if test="parentId != null">
+				parent_id ,
+			</if>
+			<if test="msg != null">
+				msg ,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="name != null">
+				#{name} ,
+			</if>
+			<if test="module != null">
+				#{module} ,
+			</if>
+			<if test="url != null">
+				#{url} ,
+			</if>
+			<if test="parentId != null">
+				#{parentId} ,
+			</if>
+			<if test="msg != null">
+				#{msg} ,
+			</if>
+		</trim>
+	</insert>
+
+	<select id="count" resultType="int">
+		select
+		count(1)
+		from
+		sys_resource
+		<where>
+			<include refid="listWhere" />
+		</where>
+	</select>
+
+	<select id="findList" resultMap="BaseResultMap">
+		select
+		<include refid="BaseColumnList" />
+		from
+		sys_resource
+		<where>
+			<include refid="listWhere" />
+		</where>
+		<if test="sortName != null ">
+			order by
+			<if test="'id' == sortName">
+				id
+			</if>
+			<if test="'name' == sortName">
+				name
+			</if>
+			<if test="'module' == sortName">
+				module
+			</if>
+			<if test="'url' == sortName">
+				url
+			</if>
+			<if test="'parentId' == sortName">
+				parent_id
+			</if>
+			<if test="'msg' == sortName">
+				msg
+			</if>
+			<if test="order != null ">
+				${ order}
+			</if>
+		</if>
+		<if test="beginIndex != null and pageSize != null">
+			limit #{beginIndex} , #{pageSize}
+		</if>
+	</select>
+
+	<update id="update">
+		update sys_resource
+		<set>
+			<if test="name != null">
+				name = #{name},
+			</if>
+			<if test="module != null">
+				module = #{module},
+			</if>
+			<if test="url != null">
+				url = #{url},
+			</if>
+			<if test="parentId != null">
+				parent_id = #{parentId},
+			</if>
+			<if test="msg != null">
+				msg = #{msg},
+			</if>
+		</set>
+		where id = #{id}	</update>
+
+
+	<delete id="deleteById" parameterType="long">
+		delete from sys_resource
+		where id = #{id}	</delete>
+	<delete id="delete">
+		delete from sys_resource
+		where id in
+	</delete>
+
+
+	<select id="getById" resultMap="BaseResultMap"
+		parameterType="Long">
+		select
+		<include refid="BaseColumnList" />
+		from
+		sys_resource
+		where id = #{id}
+	</select>
+	<select id="fetch" resultMap="BaseResultMap">
+		select
+		<include refid="BaseColumnList" />
+		from
+		sys_resource
+		<where>
+			<include refid="listWhere" />
+		</where>
+	</select>
+
+	<select id="findRoleResourceByRoleIds" resultMap="BaseResultMap">
+		select distinct a.*
+		from sys_resource a
+		inner join
+		sys_role_resource b on a.id=b.sys_resource_id   and
+		b.sys_role_id in
+		<if test="roleId != null ">
+			(#{roleId})
+		</if>
+		<if test="roleIds != null ">
+			<foreach item="item" collection="roleIds" open="(" separator=","
+					 close=")">
+				#{item}
+			</foreach>
+		</if>
+		<where>
+			<include refid="listWhere" />
+			<if test="roleIds != null">
+				and exists (select 1 from sys_role_resource c
+				where a.id=c.sys_resource_id  and
+				c.sys_role_id in
+				<foreach item="item" collection="roleIds" open="(" separator=","
+						 close=")">
+					#{item}
+				</foreach>
+				)
+			</if>
+		</where>
+	</select>
+</mapper>
+

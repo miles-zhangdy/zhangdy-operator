@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8" ?>   
+    <!DOCTYPE mapper   
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.zdy.biz.resource.dao.ISysRoleResourceDao">
+
+	<resultMap id="BaseResultMap" type="com.zdy.biz.resource.model.SysRoleResource">
+		<id column="id" property="id" />
+		<result property="sysRoleId" column="sys_role_id" />
+		<result property="sysResourceId" column="sys_resource_id" />
+		<result property="custId" column="cust_id" />
+	</resultMap>
+
+	<sql id="BaseColumnList">
+	    <![CDATA[
+			sys_role_resource.id id ,
+			sys_role_resource.sys_role_id sysRoleId ,
+			sys_role_resource.sys_resource_id sysResourceId ,
+			sys_role_resource.cust_id custId
+	    ]]>
+	</sql>
+
+	<sql id="listWhere">
+		<if test="id != null ">
+			and id = #{id}
+		</if>
+		<if test="sysRoleId != null ">
+			and sys_role_id = #{sysRoleId}
+		</if>
+		<if test="sysResourceId != null ">
+			and sys_resource_id = #{sysResourceId}
+		</if>
+		<if test="custId != null ">
+			and cust_id = #{custId}
+		</if>
+	</sql>
+
+	<insert id="save" useGeneratedKeys="true"
+		keyProperty="id">
+		insert into
+		sys_role_resource
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="sysRoleId != null">
+				sys_role_id ,
+			</if>
+			<if test="sysResourceId != null">
+				sys_resource_id ,
+			</if>
+			<if test="custId != null">
+				cust_id ,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="sysRoleId != null">
+				#{sysRoleId} ,
+			</if>
+			<if test="sysResourceId != null">
+				#{sysResourceId} ,
+			</if>
+			<if test="custId != null">
+				#{custId} ,
+			</if>
+		</trim>
+	</insert>
+
+	<select id="count" resultType="int">
+		select
+		count(*)
+		from
+		sys_role_resource
+		<where>
+			<include refid="listWhere" />
+		</where>
+	</select>
+
+	<select id="findList" resultMap="BaseResultMap">
+		select
+		<include refid="BaseColumnList" />
+		from
+		sys_role_resource
+		<where>
+			<include refid="listWhere" />
+		</where>
+		<if test="sortName != null ">
+			order by
+			<if test="'id' == sortName">
+				id
+			</if>
+			<if test="'sysRoleId' == sortName">
+				sys_role_id
+			</if>
+			<if test="'sysResourceId' == sortName">
+				sys_resource_id
+			</if>
+			<if test="'custId' == sortName">
+				cust_id
+			</if>
+			<if test="order != null ">
+				${ order}
+			</if>
+		</if>
+		<if test="beginIndex != null and pageSize != null">
+			limit #{beginIndex} , #{pageSize}
+		</if>
+	</select>
+
+	<update id="update">
+		update sys_role_resource
+		<set>
+			<if test="sysRoleId != null">
+				sys_role_id = #{sysRoleId},
+			</if>
+			<if test="sysResourceId != null">
+				sys_resource_id = #{sysResourceId},
+			</if>
+			<if test="custId != null">
+				cust_id = #{custId},
+			</if>
+		</set>
+		where id = #{id}	</update>
+
+
+	<delete id="deleteById" parameterType="long">
+		delete from sys_role_resource
+		where id = #{id}	</delete>
+	<delete id="delete">
+		delete from sys_role_resource
+		where id in
+	</delete>
+
+
+	<select id="getById" resultMap="BaseResultMap"
+		parameterType="Long">
+		select
+		<include refid="BaseColumnList" />
+		from
+		sys_role_resource
+		where id = #{id}
+	</select>
+	<select id="fetch" resultMap="BaseResultMap">
+		select
+		<include refid="BaseColumnList" />
+		from
+		sys_role_resource
+		<where>
+			<include refid="listWhere" />
+		</where>
+	</select>
+
+	<insert id="batchSaving">
+		insert into
+		sys_role_resource
+		(sys_role_id ,
+		sys_resource_id ) values
+
+		<foreach item="item" collection="sysResourceIds" open="("
+				 separator="),(" close=")">
+			#{sysRoleId},#{item}
+		</foreach>
+	</insert>
+
+
+</mapper>
+
