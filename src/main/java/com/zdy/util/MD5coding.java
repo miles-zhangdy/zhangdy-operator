@@ -1,7 +1,7 @@
 package com.zdy.util;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
-import org.apache.log4j.Logger;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -14,8 +14,8 @@ import java.util.Date;
  * @author gyh
  * 
  */
+@Slf4j
 public class MD5coding {
-	Logger logger = Logger.getLogger(getClass());
 	public static MD5coding md5coding;
 
 	public String code(String str) {
@@ -35,7 +35,7 @@ public class MD5coding {
 					hs = hs + stmp;
 			}
 		} catch (Exception e) {
-			logger.error("code error", e);
+			log.error("code error", e);
 		}
 		return hs.toUpperCase();
 	}

@@ -8,6 +8,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.zdy.common.annotation.ApiOperator;
 import com.zdy.util.*;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Controller;
@@ -37,6 +38,7 @@ import net.sf.json.JSONArray;
 
 @Controller
 @RequestMapping("user/*")
+@ApiOperator(module = Constant.LOG_MODULE_USER, moduledesc = Constant.LOG_MODULE_USER_DESC)
 public class UserController extends BaseController {
 
 	@Resource
@@ -55,6 +57,7 @@ public class UserController extends BaseController {
 	}
 
 	@RequestMapping(value = "/touserpage")
+	@ApiOperator(method="用户列表")
 	public ModelAndView toUserPage() {
 		ModelAndView mv = new ModelAndView("user/userList");
 

@@ -46,7 +46,7 @@ private static Logger log = LoggerFactory.getLogger(DataSourceAopInService.class
     
 
 	@Before("execution(* com.zdy.biz..*.*(..)) "
-			+ " and @annotation(com.zdy.common.annotation.ReadDataSource) ")
+			+ " && @annotation(com.zdy.common.annotation.ReadDataSource) ")
 	public void setReadDataSourceType() {
 		//如果已经开启写事务了，那之后的所有读都从写库读
 		if(!DataSourceType.write.getType().equals(DataSourceContextHolder.getReadOrWrite())){
@@ -56,7 +56,7 @@ private static Logger log = LoggerFactory.getLogger(DataSourceAopInService.class
 	}
 	
 	@Before("execution(* com.zdy.biz..*.*(..)) "
-			+ " and @annotation(com.zdy.common.annotation.WriteDataSource) ")
+			+ " && @annotation(com.zdy.common.annotation.WriteDataSource) ")
 	public void setWriteDataSourceType() {
 	    DataSourceContextHolder.setWrite();
 	}

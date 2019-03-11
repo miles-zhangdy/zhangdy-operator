@@ -47,7 +47,6 @@ public class SessionInterceptor implements HandlerInterceptor {
 		String url = request.getServletPath();
 		List<SysPermissionResp> permissionList = sessionUser.getPermissionList();
 		for (SysPermissionResp permission : permissionList) {
-		//	System.out.println("url:"+ url + "####" + permission.getUrl() + " checked : " + permission.getChecked());
 			if (url.indexOf(permission.getUrl()) > -1 && StringUtils.isNotBlank(permission.getUrl())) {
 				if("false".equals(permission.getChecked())){
 					throw new MyException("对不起，您没有【"+permission.getName()+"】的权限");
