@@ -1,5 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
-<footer class="footer text-right"> 2017 &copy; zhangdaye </footer>
+<footer class="footer text-right"> 2019 &copy; zhangdaye </footer>
 
 <script src="static/plugins/waypoints/lib/jquery.waypoints.js"></script>
 <script src="static/plugins/counterup/jquery.counterup.min.js"></script>

@@ -8,6 +8,9 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.auth0.jwt.JWT;
+import com.auth0.jwt.algorithms.Algorithm;
+import com.google.common.collect.Maps;
 import com.zdy.common.annotation.ApiOperator;
 import com.zdy.util.*;
 import org.apache.commons.lang.StringUtils;
@@ -302,6 +305,16 @@ public class UserController extends BaseController {
 
 		return res;
 	}
+
+
+	public String JWTGenerate(String key, String secret, String jwtSecret) {
+		Map<String, Object> headers = Maps.newConcurrentMap();
+		headers.put("alg", "HS256");
+		headers.put("typ", "JWT");
+		String builder = JWT.create().withHeader(headers).withClaim("key", key).withClaim("secret", secret).sign(Algorithm.HMAC256(jwtSecret));
+		return builder;
+	}
+
 
 	private void setSession(UserResp userResp) throws MyException {
 		SessionUser user = new SessionUser();
